@@ -180,9 +180,11 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
 
-.hero::after {
+/* .hero::after {
   content: '';
   display: block;
   position: absolute;
@@ -190,11 +192,25 @@ body {
   height: 30%;
   bottom: 0;
   background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+} */
+
+.hero .mask-container {
+  position: absolute;
+  /* background: salmon; */
+  inset: 0;
+  -webkit-mask-image: url('../img/header-bg.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
 }
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  /* max-width: 60rem; */
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 130px;
 }
 
 .hero .content h1 {
@@ -262,6 +278,10 @@ body {
 
 .about .row .about-img img {
   width: 100%;
+  -webkit-mask-image: url('../img/menu/splash.svg');
+  -webkit-mask-size: 50%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .about .row .content {
